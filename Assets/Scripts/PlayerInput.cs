@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OnLeft()
     {
-        // Hello
+        transform.position += Vector3.left;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnRight()
     {
-        
+        transform.position += Vector3.right;
+    }
+
+    public void OnUp()
+    {
+        transform.position += Vector3.forward;
+    }
+
+    public void OnDown ()
+    {
+        transform.position += Vector3.back;
     }
 }
