@@ -22,5 +22,6 @@ public class PlayerInput : MonoBehaviour
     public void OnDown ()
     {
         transform.position += Vector3.back;
+        // b2*8
     }
 }
