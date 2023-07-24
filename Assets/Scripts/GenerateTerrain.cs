@@ -25,7 +25,7 @@ public class GenerateTerrain : MonoBehaviour
         float[,] h = new float[size, size];                     // Création d'un array en deux dimensions [,] pour stocker les hauteurs de terrain
 
 
-        // On remplit le tableau avec des valeurs de bruit de Perlin pour générer
+        // On remplit le tableau avec des valeurs de bruit de Perlin pour générer différentes hauteurs
         for (int i = 0; i < size; i++)
         {
             for (int j = 0; j < size; j++)
@@ -34,6 +34,9 @@ public class GenerateTerrain : MonoBehaviour
                 h[i, j] = Mathf.PerlinNoise((float)i / size * 10, (float)j / size * 10);
             }
         }
+
+        // On assigne alors à notre terrain, la hauteur randomisée
+        tData.SetHeights(0, 0, h);
         return tData;
     }
 
